@@ -2,15 +2,15 @@ version: "3.8"
 
 services:
   postgres: 
-    image: postgres:15.2
+    image: postgres
     restart: always
-    port: 
+    ports: 
       - "5432:5432"
     environment:
-      - DATABASE_HOST = 0.0.0.0
-      - POSTGRES_USER=rot
-      - POSTGRES_PASSWORD= root
-      - POSTGRES_DB= root
+      - DATABASE_HOST =127.0.0.1
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=root
 
   pgadmin:
     image: dpage/pgadmin4
